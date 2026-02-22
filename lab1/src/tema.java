@@ -78,7 +78,7 @@ public class tema {
             }
         for(int i=0;i<n;i++) {
             for (int j = 0; j < n; j++) {
-                System.out.printf("%4d", m[i][j]);
+                System.out.printf("%5d", m[i][j]);
             }
             System.out.println();
         }
@@ -98,11 +98,12 @@ public class tema {
             }
         for(int i=0;i<n;i++) {
             for (int j = 0; j < n; j++) {
-                System.out.printf("%4d", m[i][j]);
+                System.out.printf("%5d", m[i][j]);
             }
             System.out.println();
         }
     }
+
 
     public static void dreptunghi2(int n){
         StringBuilder s=new StringBuilder();

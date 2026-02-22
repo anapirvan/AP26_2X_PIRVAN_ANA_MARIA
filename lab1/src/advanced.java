@@ -3,7 +3,7 @@ public class advanced {
         int[][] mat=new int[7][9];
         for(int i=0;i<7;i++)
             for(int j=0;j<9;j++){
-                if(i%3==0 && j%5==1){
+                if(i%3==0 && j%5==1 ){
                     mat[i][j]=1;
                 }
                 else{

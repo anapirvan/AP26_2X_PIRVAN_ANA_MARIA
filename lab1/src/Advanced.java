@@ -1,4 +1,4 @@
-public class advanced {
+public class Advanced {
     public static void main(String[] args){
         int[][] mat=new int[7][9];
         for(int i=0;i<7;i++)

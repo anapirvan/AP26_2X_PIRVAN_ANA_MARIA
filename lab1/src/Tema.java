@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-public class tema {
+public class Tema {
     public static void main(String args[]){
 
         int n=Integer.parseInt(args[0]);

@@ -1,0 +1,50 @@
+# --- Compiled class files ---
+*.class
+*.log
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# --- Virtual Machine temp files ---
+hs_err_pid*
+replay_pid*
+
+# --- Build tool folders ---
+target/
+build/
+.gradle/
+out/
+
+# --- IntelliJ IDEA specific ---
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/resources/*.iml
+
+# --- Maven specific ---
+.mvn/wrapper/maven-wrapper.properties
+.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+
+# --- Gradle specific ---
+.gradle
+/build/
+gradlew
+gradlew.bat
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+
+# --- OS specific ---
+.DS_Store
+Thumbs.db
+
+# --- Environment variables (Security!) ---git
+.env
+.env.local

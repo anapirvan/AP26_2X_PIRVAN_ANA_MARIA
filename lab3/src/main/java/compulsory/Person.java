@@ -6,7 +6,7 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 
-public class Person implements Profile,Comparable<Person>{
+public class Person implements Profile, Comparable<Person> {
     private int id;
     private String name;
 

@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"homework","l":"Airport"},{"l":"All Classes and Interfaces","u":"allclasses-index.html","k":"18"},{"p":"homework","l":"City"},{"p":"homework","l":"GasStation"},{"p":"homework","l":"Location"},{"p":"homework","l":"Main"},{"p":"homework","l":"Problem"},{"p":"homework","l":"Road"},{"p":"homework","l":"RoadType","k":"9"}];updateSearchResults();

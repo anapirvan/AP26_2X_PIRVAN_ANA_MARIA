@@ -1,6 +1,5 @@
-package compulsory;
+package advanced;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.util.ArrayList;
@@ -20,9 +19,20 @@ public class Catalog {
         items.add(item);
     }
 
-    public void display(){
-        for(Item item:items){
+    public void display() {
+        if (items.isEmpty()) {
+            System.out.println("Catalog is empty!");
+            return;
+        }
+        for (Item item : items) {
             System.out.println(item);
         }
     }
+
+    public Item findById(String id) {
+        return items.stream()
+                .filter(d -> d.getId().equals(id)).findFirst().orElse(null);
+    }
 }
+
+

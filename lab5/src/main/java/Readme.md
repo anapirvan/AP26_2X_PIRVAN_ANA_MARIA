@@ -1,4 +1,13 @@
-Compulsory:
+Compulsory+Homework:
 
-Clasa Catalog contine o lista de Item-uri.
-In Main cream mai multe obiecte Item pe care le adaugam intr-un Catalog. Metoda openResource deschide o resursa folosindu-se de clasa Desktop, si arunca o exceptie in cazul in care resursa nu s-a putut deschide.
+Interfata Command descrie o comanda generica.
+Clasa AddCommand implementeaza Command si adauga resurse in catalog.
+Clasa ListCommand implementeaza Command si afiseaza catalogul.
+Clasa ReportCommand implementeaza Command si creeaza un raport HTML, care reprezinta continutul catalogului.
+Clasa ViewCommand implementeaza Command si deschide adresa web sau fisierul local dintr-o resursa.
+
+Advanced:
+
+Metoda minSetCover din clasa Main returneaza un set minim de resurse care acopera toate conceptele din concepts.
+Clasa ProblemGenerator creeaza mai multe instante random ale clasei Catalog si masoara timpul de executie al 
+algoritmului minSetCover.

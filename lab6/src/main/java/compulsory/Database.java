@@ -21,7 +21,7 @@ public class Database {
         return database;
     }
 
-    public Connection getConnection() {
+    public static Connection getConnection() {
         if (connection == null) {
             createConnection();
         }

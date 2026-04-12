@@ -24,9 +24,9 @@ public class GenreDAO {
     public String findById(int id) throws SQLException {
         Connection con = Database.getInstance().getConnection();
         try (Statement statement = con.createStatement();
-             ResultSet rs = statement.executeQuery(
+             ResultSet resultSet = statement.executeQuery(
                      "select name from genres where id='" + id + "'")) {
-            return rs.next() ? rs.getString(1) : null;
+            return resultSet.next() ? resultSet.getString(1) : null;
         }
     }
 }

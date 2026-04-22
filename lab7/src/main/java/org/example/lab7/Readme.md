@@ -7,8 +7,7 @@ MovieController se ocupa de maparea endpoint-urilor propriu-zise, apland metodel
 
 Homework:
 
-In pachetul dto, MovieRequestDTO si ScoreRequestDTO sun folosite pentru metodele care au nevoie de body, precum POST, PUT si PATCH.
-In GlobalExceptionHandler personalizam exceptiile de care avem nevoie in MovieService atunci cand facem anumite verificari inainte de alterarea bazei de date. 
-In pachetul client, am facut un MovieDTO care este folosit ca body la response.
+In pachetul dto, MovieRequestDTO si ScoreRequestDTO sun folosite pentru metodele care au nevoie de body, precum POST, PUT si PATCH, iar MovieResponseDTO este intors ca raspuns de POST, PUT si PATCH.
+In GlobalExceptionHandler personalizam exceptiile de care avem nevoie in MovieService atunci cand facem anumite verificari inainte de alterarea bazei de date.
 MovieClientService utilizeaza RestClient pt a interactiona cu endpoint-urile REST ale serverului.
 ClientRunner simuleaza comportamnetul unui user real al API-ului construit.

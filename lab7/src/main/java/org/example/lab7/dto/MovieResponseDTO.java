@@ -1,6 +1,9 @@
-package org.example.lab7.client;
+package org.example.lab7.dto;
 
-public record MovieDTO(
+import lombok.AllArgsConstructor;
+
+
+public record MovieResponseDTO(
         Integer id,
         String title,
         String releaseDate,

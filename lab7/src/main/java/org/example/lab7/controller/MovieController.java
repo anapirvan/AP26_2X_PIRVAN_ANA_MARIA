@@ -5,10 +5,12 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.example.lab7.dto.MovieRequestDTO;
+import org.example.lab7.dto.MovieResponseDTO;
 import org.example.lab7.dto.ScoreRequestDTO;
 import org.example.lab7.model.Movie;
 import org.example.lab7.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,8 +28,8 @@ public class MovieController {
     @ApiResponse(responseCode = "200", description = "Movies obtained successfully")
     @ApiResponse(responseCode = "500", description = "Internal Server Error")
     @GetMapping
-    public List<Movie> getAll() {
-        return movieService.findAll();
+    public ResponseEntity<List<MovieResponseDTO>> getAll() {
+        return ResponseEntity.ok(movieService.findAll());
     }
 
     @Operation(summary = "Create a new movie")
@@ -37,8 +39,9 @@ public class MovieController {
     @ApiResponse(responseCode = "409", description = "Unique constraint (title, releaseDate) violated")
     @ApiResponse(responseCode = "500", description = "Internal Server Error")
     @PostMapping
-    public Movie create(@Valid @RequestBody MovieRequestDTO request){
-        return movieService.save(request);
+    public ResponseEntity<MovieResponseDTO> create(@Valid @RequestBody MovieRequestDTO request){
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(movieService.save(request));
     }
 
     @Operation(summary = "Update a movie")
@@ -47,8 +50,8 @@ public class MovieController {
     @ApiResponse(responseCode = "404", description = "Movie/Genre not found")
     @ApiResponse(responseCode = "500", description = "Internal Server Error")
     @PutMapping("/{id}")
-    public Movie updateMovie(@PathVariable int id, @Valid @RequestBody MovieRequestDTO request){
-        return movieService.update(id,request);
+    public ResponseEntity<MovieResponseDTO> updateMovie(@PathVariable int id, @Valid @RequestBody MovieRequestDTO request){
+        return ResponseEntity.ok(movieService.update(id,request));
     }
 
     @Operation(summary = "Update the score of a movie")
@@ -57,8 +60,8 @@ public class MovieController {
     @ApiResponse(responseCode = "404", description = "Movie/Genre not found")
     @ApiResponse(responseCode = "500", description = "Internal Server Error")
     @PatchMapping("/{id}/score")
-    public Movie updateScore(@PathVariable int id, @Valid @RequestBody ScoreRequestDTO request){
-        return movieService.updateScore(id, request.score());
+    public ResponseEntity<MovieResponseDTO> updateScore(@PathVariable int id, @Valid @RequestBody ScoreRequestDTO request){
+        return ResponseEntity.ok(movieService.updateScore(id, request.score()));
     }
 
     @Operation(summary = "Delete a movie")

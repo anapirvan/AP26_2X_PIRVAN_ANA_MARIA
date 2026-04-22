@@ -1,8 +1,5 @@
 package org.example.lab7.dto;
 
-import lombok.AllArgsConstructor;
-
-
 public record MovieResponseDTO(
         Integer id,
         String title,

@@ -23,13 +23,13 @@ public class Maze {
         rows = layout.length;
         cols = layout[0].length();
         grid = new Cell[rows][cols];
-        for (int r = 0; r < rows; r++)
-            for (int c = 0; c < cols; c++) {
-                char ch = layout[r].charAt(c);
+        for (int row = 0; row < rows; row++)
+            for (int column = 0; column < cols; column++) {
+                char ch = layout[row].charAt(column);
                 boolean isExit = (ch == 'E');
                 boolean isWall = (ch == '#');
-                Cell cell = new Cell(r, c, isWall, isExit);
-                grid[r][c] = cell;
+                Cell cell = new Cell(row, column, isWall, isExit);
+                grid[row][column] = cell;
                 if (isExit) {
                     exit = cell;
                 }
@@ -47,10 +47,10 @@ public class Maze {
     public List<Cell> getFreeNeighbors(Cell cell) {
         int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
         List<Cell> result = new ArrayList<>();
-        for (int[] d : directions) {
-            int nr = cell.getRow() + d[0], nc = cell.getCol() + d[1];
-            if (nr >= 0 && nr < rows && nc >= 0 && nc < cols && !grid[nr][nc].isWall())
-                result.add(grid[nr][nc]);
+        for (int[] direction : directions) {
+            int rowNumber = cell.getRow() + direction[0], columnNumber = cell.getCol() + direction[1];
+            if (rowNumber >= 0 && rowNumber < rows && columnNumber >= 0 && columnNumber < cols && !grid[rowNumber][columnNumber].isWall())
+                result.add(grid[rowNumber][columnNumber]);
         }
         return result;
     }

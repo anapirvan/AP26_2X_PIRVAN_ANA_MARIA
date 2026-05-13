@@ -1,0 +1,5 @@
+What is the capital of France?|Paris|London|Berlin|Madrid
+How many sides does a hexagon have?|6|5|7|8
+What is 2 + 2?|4|3|5|22
+Who wrote Hamlet?|Shakespeare|Dickens|Tolstoy|Homer
+What color is the sky?|Blue|Green|Red|Yellow

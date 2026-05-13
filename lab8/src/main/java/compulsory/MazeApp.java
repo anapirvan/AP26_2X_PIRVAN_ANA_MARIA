@@ -389,8 +389,8 @@ public class MazeApp extends Application {
         int count = 1;
 
         while (!queue.isEmpty()) {
-            int[] cur = queue.poll();
-            int r = cur[0], c = cur[1];
+            int[] current = queue.poll();
+            int r = current[0], c = current[1];
 
             if (r > 0 && !cells[r][c].isTopWall() && !visited[r - 1][c]) {
                 visited[r - 1][c] = true;
